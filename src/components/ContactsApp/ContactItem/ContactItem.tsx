@@ -1,3 +1,4 @@
+// Styles
 import styles from "./ContactItem.module.css";
 
 const ContactItem: React.FC<{

@@ -1,7 +1,10 @@
+// Hooks
+import { useState } from "react";
+// Styles
 import styles from "./ContactsList.module.css";
+// Components
 import ContactItem from "..//ContactItem/ContactItem";
 import Contact from "../Contact";
-import { useState } from "react";
 
 const ContactsList: React.FC<{
   items: Contact[];

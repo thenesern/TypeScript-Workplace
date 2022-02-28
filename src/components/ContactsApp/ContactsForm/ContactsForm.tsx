@@ -1,5 +1,7 @@
-import styles from "./ContactsForm.module.css";
+// Hooks
 import { useRef } from "react";
+// Styles
+import styles from "./ContactsForm.module.css";
 
 const ContactsForm: React.FC<{
   onAddContact: (

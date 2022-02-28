@@ -15,23 +15,13 @@ function App() {
               <h3 className={styles.headers}>Contacts App</h3>
               <img
                 className={styles.imgs}
-                src=""
+                src="https://raw.githubusercontent.com/thenesern/TypeScript-Workplace/master/src//assets/ContactsApp/ContactsApp.png"
                 alt="Contacts App"
                 title="Contacts App"
               />
             </div>
           </Link>
         </article>
-
-        <article className={styles.pages}></article>
-
-        <article className={styles.pages}></article>
-
-        <article className={styles.pages}></article>
-
-        <article className={styles.pages}></article>
-
-        <article className={styles.pages}></article>
 
         <article className={styles.pages}></article>
 

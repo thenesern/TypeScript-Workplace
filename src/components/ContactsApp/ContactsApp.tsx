@@ -1,8 +1,12 @@
-import ContactsForm from "./ContactsForm/ContactsForm";
-import styles from "./ContactsApp.module.css";
-import ContactsList from "./ContactsList/ContactsList";
+// Hooks
 import { useState } from "react";
+// Styles
+import styles from "./ContactsApp.module.css";
+// Components
+import ContactsForm from "./ContactsForm/ContactsForm";
+import ContactsList from "./ContactsList/ContactsList";
 import Contact from "./Contact";
+import HomeButton from "../HomeButton/Button";
 
 const ContactsApp = () => {
   const [contacts, setContacts] = useState<Contact[]>([
@@ -33,6 +37,7 @@ const ContactsApp = () => {
   };
   return (
     <div className={styles.container}>
+      <HomeButton />
       <div className={styles.app}>
         <ContactsForm onAddContact={addContactHandler} />
         <ContactsList items={contacts} onRemoveContact={removeContactHandler} />

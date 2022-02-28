@@ -1,24 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Link } from "react-router-dom";
+import "./App.css";
+import styles from "./App.module.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <h3 className={styles.header}>
+        React (TypeScript) Workplace - Enes Eren
+      </h3>
+      <section className={styles.section}>
+        <article className={styles.pages}>
+          <Link to="/contacts">
+            <div className={styles.works}>
+              <h3 className={styles.headers}>Contacts App</h3>
+              <img
+                className={styles.imgs}
+                src=""
+                alt="Contacts App"
+                title="Contacts App"
+              />
+            </div>
+          </Link>
+        </article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+
+        <article className={styles.pages}></article>
+      </section>
     </div>
   );
 }

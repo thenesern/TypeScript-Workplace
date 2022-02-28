@@ -1,0 +1,23 @@
+.li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  height: 1rem;
+  margin: 1px 6px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  cursor: pointer;
+  padding: 8px 10px;
+  gap: 1rem;
+  border-radius: 4px;
+}
+
+.li:hover {
+  background-color: gray;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 10rem;
+}

@@ -41,6 +41,7 @@ const ContactsList: React.FC<{
           />
         ))}
       </ul>
+      <span className={styles.counter}>Total Contacts: {filtered.length}</span>
     </div>
   );
 };

@@ -1,6 +1,11 @@
 import styles from "./ContactsList.module.css";
+import ContactItem from "..//ContactItem/ContactItem";
+import Contact from "../Contact";
 
-const ContactsList = () => {
+const ContactsList: React.FC<{
+  items: Contact[];
+  onRemoveContact: (id: any) => void;
+}> = (props) => {
   return (
     <div className={styles.list}>
       <input
@@ -9,50 +14,15 @@ const ContactsList = () => {
         placeholder="Search for a contact"
       />
       <ul className={styles.contacts}>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
-        <li className={styles.li}>
-          <h6 className={styles.name}>John Doe</h6>
-          <span>0123456789</span>
-        </li>
+        {props.items.map((item) => (
+          <ContactItem
+            key={item.id}
+            firstName={item.firstName}
+            lastName={item.lastName}
+            phoneNumber={item.phoneNumber}
+            onRemoveContact={props.onRemoveContact.bind(null, item.id)}
+          />
+        ))}
       </ul>
     </div>
   );

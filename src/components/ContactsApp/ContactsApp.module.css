@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe8d6;
+}
+
+.app {
+  width: 36rem;
+  height: 16rem;
+  display: grid;
+  align-items: flex-start;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  background-color: #b7b7a4;
+  border-radius: 10px;
+}

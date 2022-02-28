@@ -1,7 +1,7 @@
 import styles from "./ContactsForm.module.css";
 import { useRef } from "react";
 
-const ContacsForm: React.FC<{
+const ContactsForm: React.FC<{
   onAddContact: (
     firstName: string,
     lastName: string,
@@ -11,6 +11,7 @@ const ContacsForm: React.FC<{
   const firstNameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
   const phoneNumberRef = useRef<HTMLInputElement>(null);
+
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -71,4 +72,4 @@ const ContacsForm: React.FC<{
   );
 };
 
-export default ContacsForm;
+export default ContactsForm;

@@ -8,7 +8,7 @@ const ContactItem: React.FC<{
 }> = (props) => {
   return (
     <li className={styles.li} onClick={props.onRemoveContact}>
-      <h6>
+      <h6 className={styles.name}>
         {props.firstName} {props.lastName}
       </h6>
       <span>{props.phoneNumber}</span>

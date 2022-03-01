@@ -1,5 +1,7 @@
+// Hooks
+import { useRef } from "react";
+// Styles
 import styles from "./ToDoForm.module.css";
-import React, { useRef } from "react";
 
 const ToDoForm: React.FC<{ onAddToDo: (inputValue: string) => void }> = (
   props

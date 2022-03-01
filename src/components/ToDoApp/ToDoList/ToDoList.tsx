@@ -1,6 +1,8 @@
+// Styles
+import styles from "./ToDoList.module.css";
+// Components
 import ToDo from "../ToDo";
 import ToDoItem from "../ToDoItem/ToDoItem";
-import styles from "./ToDoList.module.css";
 
 const ToDoList: React.FC<{
   items: ToDo[];

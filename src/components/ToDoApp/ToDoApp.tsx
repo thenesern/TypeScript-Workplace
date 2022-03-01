@@ -1,6 +1,9 @@
-import ToDoForm from "./ToDoForm/ToDoForm";
-import styles from "./ToDoApp.module.css";
+// Hooks
 import { useState } from "react";
+// Styles
+import styles from "./ToDoApp.module.css";
+// Components
+import ToDoForm from "./ToDoForm/ToDoForm";
 import ToDo from "./ToDo";
 import ToDoList from "./ToDoList/ToDoList";
 import Button from "../HomeButton/Button";

@@ -16,4 +16,5 @@
   grid-template-columns: 1fr 1fr;
   background-color: #b7b7a4;
   border-radius: 10px;
+  transform: scale(1.5);
 }

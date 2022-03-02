@@ -26,8 +26,8 @@ const AddUserForm: React.FC<{
       });
     }
     props.onAddUser(enteredUsername, Number(enteredAge));
-    enteredUsername = "";
-    enteredAge = "";
+    usernameRef.current!.value = "";
+    ageRef.current!.value = "";
   };
 
   const errorHandler = () => {

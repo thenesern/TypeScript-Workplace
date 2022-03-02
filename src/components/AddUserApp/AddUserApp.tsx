@@ -1,13 +1,23 @@
 import styles from "./AddUserApp.module.css";
 import AddUserForm from "./AddUserForm/AddUserForm";
 import AddUserList from "./AddUserList/AddUserList";
+import { useState } from "react";
+import User from "./User";
 
 const AddUserApp = () => {
+  const [usersList, setUsersList] = useState<User[]>([]);
+  const onAddUser = (userName: string, userAge: number) => {
+    const newUser = new User(userName, userAge);
+    setUsersList((prevUserList) => {
+      return prevUserList.concat(newUser);
+    });
+  };
+  console.log(usersList);
   return (
     <div className={styles.container}>
       <div className={styles.app}>
         <AddUserForm onAddUser={onAddUser} />
-        <AddUserList />
+        <AddUserList users={usersList} />
       </div>
     </div>
   );

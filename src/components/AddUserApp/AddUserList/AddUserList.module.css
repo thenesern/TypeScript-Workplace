@@ -1,0 +1,25 @@
+.list {
+  background-color: #b7b7a4;
+  width: 48rem;
+  height: 24rem;
+  overflow-y: scroll;
+  border-radius: 0 0 6px 6px;
+}
+.list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: #b7b7a4;
+  border-radius: 1rem;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 1rem;
+}
+
+.header {
+  text-align: center;
+  padding: 1rem;
+}

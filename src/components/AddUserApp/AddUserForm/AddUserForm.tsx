@@ -1,9 +1,11 @@
 import { useState, useRef } from "react";
+import ErrorModal from "../ErrorModal/ErrorModal";
+import styles from "./AddUserForm.module.css";
 
 const AddUserForm: React.FC<{
   onAddUser: (enteredUsername: string, enteredAge: number) => void;
 }> = (props) => {
-  const [error, setError] = useState({});
+  const [error, setError] = useState<any>();
   const usernameRef = useRef<HTMLInputElement>(null);
   const ageRef = useRef<HTMLInputElement>(null);
 
@@ -27,14 +29,33 @@ const AddUserForm: React.FC<{
     enteredUsername = "";
     enteredAge = "";
   };
+
+  const errorHandler = () => {
+    setError(null);
+  };
+
   return (
-    <form onSubmit={submitHandler}>
-      <label htmlFor="username">Username: </label>
-      <input type="text" id="username" ref={usernameRef} />
-      <label htmlFor="age">Age: </label>
-      <input type="text" id="age" ref={ageRef} />
-      <button>Submit</button>
-    </form>
+    <>
+      {error && (
+        <ErrorModal
+          title={error.title}
+          message={error.message}
+          onConfirm={errorHandler}
+        />
+      )}
+      <form onSubmit={submitHandler} className={styles.form}>
+        <label htmlFor="username">Username: </label>
+        <input
+          type="text"
+          id="username"
+          ref={usernameRef}
+          className={styles.username}
+        />
+        <label htmlFor="age">Age: </label>
+        <input className={styles.age} type="number" id="age" ref={ageRef} />
+        <button className={styles.button}>Submit</button>
+      </form>
+    </>
   );
 };
 

@@ -1,6 +1,9 @@
+// Hooks
 import { useState, useRef } from "react";
-import ErrorModal from "../ErrorModal/ErrorModal";
+// Styles
 import styles from "./AddUserForm.module.css";
+// Components
+import ErrorModal from "../ErrorModal/ErrorModal";
 
 const AddUserForm: React.FC<{
   onAddUser: (enteredUsername: string, enteredAge: number) => void;

@@ -1,7 +1,8 @@
-import React from "react";
+// Styles
+import styles from "./AddUserList.module.css";
+// Components
 import User from "../User";
 import UserItem from "../UserItem/UserItem";
-import styles from "./AddUserList.module.css";
 
 const AddUserList: React.FC<{
   users: User[];

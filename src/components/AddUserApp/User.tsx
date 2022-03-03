@@ -1,3 +1,4 @@
+// Dependencies
 import { nanoid } from "nanoid";
 
 class User {

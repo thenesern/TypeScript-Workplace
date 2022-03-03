@@ -1,4 +1,6 @@
+// Styles
 import styles from "./ErrorModal.module.css";
+// Components
 import Card from "./Card";
 import Button from "./Button";
 

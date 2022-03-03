@@ -1,3 +1,4 @@
+// Styles
 import styles from "./UserItem.module.css";
 
 const UserItem: React.FC<{ name: string; age: number }> = (props) => {

@@ -1,4 +1,6 @@
+// Hooks
 import { useState, useEffect } from "react";
+// Styles
 import styles from "./Form.module.css";
 
 const Form = () => {

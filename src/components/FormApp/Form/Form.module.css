@@ -42,6 +42,7 @@
 
 .button {
   font: inherit;
+  color: #eee;
   background-color: #240370;
   border: 1px solid #240370;
   padding: 0.5rem 1.5rem;

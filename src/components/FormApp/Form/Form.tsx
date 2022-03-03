@@ -39,7 +39,10 @@ const Form = () => {
   }, [lastName, lastNameBlur]);
 
   useEffect(() => {
-    if (email.trim().length < 1 && emailBlur) {
+    if (
+      (email.trim().length < 3 || !email.includes("@") === true) &&
+      emailBlur
+    ) {
       setEmailError(true);
     } else {
       setEmailError(false);
@@ -47,13 +50,45 @@ const Form = () => {
   }, [email, emailBlur]);
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
+    if (
+      !firstNameError &&
+      !lastNameError &&
+      !emailError &&
+      firstNameBlur &&
+      lastNameBlur &&
+      emailBlur
+    ) {
+      alert("Form Submitted");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setFirstNameBlur(false);
+      setLastNameBlur(false);
+      setEmailBlur(false);
+    } else {
+      setFirstNameError(true);
+      setLastNameError(true);
+      setEmailError(true);
+    }
   };
+
+  const firstNameStyles = firstNameError
+    ? `${styles["form-control"]} ${styles.invalid}`
+    : styles["form-control"];
+
+  const lastNameStyles = lastNameError
+    ? `${styles["form-control"]} ${styles.invalid}`
+    : styles["form-control"];
+
+  const emailStyles = emailError
+    ? `${styles["form-control"]} ${styles.invalid}`
+    : styles["form-control"];
 
   return (
     <form onSubmit={submitHandler}>
       <div className={styles["control-group"]}>
-        <div /* className={firstNameStyles} */>
-          <label htmlFor="name">First Name</label>
+        <div className={firstNameStyles}>
+          <label htmlFor="name">First Name: </label>
           <input
             type="text"
             id="name"
@@ -65,8 +100,8 @@ const Form = () => {
             <p className={styles["error-text"]}>Invalid First Name</p>
           )}
         </div>
-        <div /*  className={lastNameStyles} */>
-          <label htmlFor="name">Last Name</label>
+        <div className={lastNameStyles}>
+          <label htmlFor="name">Last Name: </label>
           <input
             type="text"
             id="name"
@@ -78,17 +113,17 @@ const Form = () => {
             <p className={styles["error-text"]}>Invalid Last Name</p>
           )}
         </div>
-      </div>
-      <div /* className={emailStyles} */>
-        <label htmlFor="name">E-Mail Address</label>
-        <input
-          type="text"
-          id="name"
-          value={email}
-          onChange={emailHandler}
-          onBlur={() => setEmailBlur(true)}
-        />
-        {emailError && <p className={styles["error-text"]}>Invalid Email</p>}
+        <div className={emailStyles}>
+          <label htmlFor="name">E-Mail Address: </label>
+          <input
+            type="text"
+            id="name"
+            value={email}
+            onChange={emailHandler}
+            onBlur={() => setEmailBlur(true)}
+          />
+          {emailError && <p className={styles["error-text"]}>Invalid Email</p>}
+        </div>
       </div>
       <div className={styles["form-actions"]}>
         <button className={styles.button} /* disabled={!formIsValid} */>

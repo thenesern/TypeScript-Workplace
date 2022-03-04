@@ -71,7 +71,7 @@ function App() {
               <h3 className={styles.headers}>Markdown Previewer</h3>
               <img
                 className={styles.imgs}
-                src=""
+                src="https://raw.githubusercontent.com/thenesern/TypeScript-Workplace/master/src//assets/MarkdownPreviewer/MarkdownPreviewer.png"
                 alt="Markdown Previewer"
                 title="Markdown Previewer"
               />

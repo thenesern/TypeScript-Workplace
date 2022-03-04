@@ -6,6 +6,7 @@ import ContactsApp from "./components/ContactsApp/ContactsApp";
 import ToDoApp from "./components/ToDoApp/ToDoApp";
 import AddUserApp from "./components/AddUserApp/AddUserApp";
 import FormApp from "./components/FormApp/FormApp";
+import MarkdownPreviewer from "./components/MarkdownPreviewer/MarkdownPreviewerApp";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route path="/todo" element={<ToDoApp />} />
       <Route path="/adduser" element={<AddUserApp />} />
       <Route path="/form" element={<FormApp />} />
+      <Route path="/markdown-previewer" element={<MarkdownPreviewer />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")

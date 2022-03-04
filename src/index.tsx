@@ -7,6 +7,7 @@ import ToDoApp from "./components/ToDoApp/ToDoApp";
 import AddUserApp from "./components/AddUserApp/AddUserApp";
 import FormApp from "./components/FormApp/FormApp";
 import MarkdownPreviewer from "./components/MarkdownPreviewer/MarkdownPreviewerApp";
+import TextGenerator from "./components/TextGenerator/TextGeneratorApp";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route path="/adduser" element={<AddUserApp />} />
       <Route path="/form" element={<FormApp />} />
       <Route path="/markdown-previewer" element={<MarkdownPreviewer />} />
+      <Route path="/text-generator" element={<TextGenerator />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")

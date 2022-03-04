@@ -1,0 +1,66 @@
+.app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #023047;
+  color: #f7ede2;
+  padding: 0 4%;
+}
+
+.heading {
+  padding-top: 30%;
+  text-align: center;
+}
+
+.controls {
+  padding: 1rem 2rem;
+  margin: 3% 0 1% 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  background: #219ebc;
+  border-radius: 10px 10px 0 0;
+}
+
+.textarea {
+  background: #6b705c;
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  height: 30rem;
+}
+
+.text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.text::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.text::-webkit-scrollbar-thumb {
+  background-color: white;
+  outline: 1px solid slategrey;
+}
+
+.main {
+  padding-top: 1%;
+  min-width: 100%;
+}
+
+.text {
+  overflow-y: scroll;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1377px) {
+  .textarea {
+    background: #6b705c;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    height: 24rem;
+  }
+}

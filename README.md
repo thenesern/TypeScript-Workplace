@@ -7,6 +7,7 @@ Welcome to the my "React (TypeScript) Workplace". In this repository, you'll fin
 - AddUser App
 - Form App
 - Markdown Previewer
+- Text Generator
 
   It is enough to run this "react app" to reach all of the apps upper.
 
@@ -46,3 +47,6 @@ You may also see any lint errors in the console.
   
 <img src="https://raw.githubusercontent.com/thenesern/TypeScript-Workplace/master/src//assets/MarkdownPreviewer/MarkdownPreviewer.png">
 
+<h4 align="center">Text Generator</h4> 
+  
+<img src="https://raw.githubusercontent.com/thenesern/TypeScript-Workplace/master/src//assets/TextGenerator/TextGenerator.png">

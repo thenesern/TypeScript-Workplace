@@ -65,7 +65,6 @@ function App() {
         </article>
 
         <article className={styles.pages}>
-          {" "}
           <Link to="/markdown-previewer">
             <div className={styles.works}>
               <h3 className={styles.headers}>Markdown Previewer</h3>
@@ -79,7 +78,19 @@ function App() {
           </Link>
         </article>
 
-        <article className={styles.pages}></article>
+        <article className={styles.pages}>
+          <Link to="/text-generator">
+            <div className={styles.works}>
+              <h3 className={styles.headers}>Text Generator</h3>
+              <img
+                className={styles.imgs}
+                src="https://raw.githubusercontent.com/thenesern/TypeScript-Workplace/master/src//assets/TextGenerator/TextGenerator.png"
+                alt="Text Generator"
+                title="Text Generator"
+              />
+            </div>
+          </Link>
+        </article>
 
         <article className={styles.pages}></article>
 

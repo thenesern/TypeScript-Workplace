@@ -16,7 +16,7 @@ const ContactsApp = () => {
     new Contact("William", "Doe", "1111111111"),
     new Contact("Mary", "Doe", "2222222222"),
     new Contact("Michael", "Doe", "3333333333"),
-    new Contact("Mary", "Doe", "4444444444"),
+    new Contact("Skyler", "Doe", "4444444444"),
     new Contact("Sarah", "Doe", "5555555555"),
   ]);
   const addContactHandler = (

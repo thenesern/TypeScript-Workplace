@@ -48,7 +48,7 @@ const TextGeneratorApp = () => {
       <main className={styles.main}>
         <div className={styles.controls}>
           <div>
-            <label htmlFor="paragraphs">Paragrahps: </label>
+            <label htmlFor="paragraphs">Paragraphs: </label>
             <input
               id="paragraphs"
               type="number"

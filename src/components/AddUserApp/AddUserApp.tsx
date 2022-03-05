@@ -16,7 +16,6 @@ const AddUserApp = () => {
       return prevUserList.concat(newUser);
     });
   };
-  console.log(usersList);
   return (
     <div className={styles.container}>
       <Button />

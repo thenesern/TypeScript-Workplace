@@ -15,13 +15,13 @@ const Form = () => {
   const [emailBlur, setEmailBlur] = useState(false);
   console.log(firstNameBlur, lastNameBlur, emailBlur);
   console.log(firstName, lastName, email);
-  const firstNameHandler = (e: any) => {
+  const firstNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFirstName(e.target.value);
   };
-  const lastNameHandler = (e: any) => {
+  const lastNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLastName(e.target.value);
   };
-  const emailHandler = (e: any) => {
+  const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
   useEffect(() => {

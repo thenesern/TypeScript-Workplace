@@ -8,7 +8,10 @@ import ErrorModal from "../ErrorModal/ErrorModal";
 const AddUserForm: React.FC<{
   onAddUser: (enteredUsername: string, enteredAge: number) => void;
 }> = (props) => {
-  const [error, setError] = useState<any>();
+  const [error, setError] = useState<{
+    title: string;
+    message: string;
+  } | null>();
   const usernameRef = useRef<HTMLInputElement>(null);
   const ageRef = useRef<HTMLInputElement>(null);
 
